@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* 3D Flip Flashcard Utilities */
+.perspective {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Scrollbar Utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #2e303a;
+  border-radius: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+/* Custom fade and slide animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dashboard light theme overrides. Dark mode remains the default Tailwind styling. */
+[data-theme='light'],
+[data-theme='light'].bg-neutral-950,
+[data-theme='light'] .bg-neutral-950 {
+  background-color: #f6f7fb !important;
+  color: #111827 !important;
+}
+
+[data-theme='light'] .bg-neutral-900,
+[data-theme='light'] .bg-neutral-900\/10,
+[data-theme='light'] .bg-neutral-900\/20,
+[data-theme='light'] .bg-neutral-900\/25,
+[data-theme='light'] .bg-neutral-900\/30,
+[data-theme='light'] .bg-neutral-900\/40,
+[data-theme='light'] .bg-neutral-900\/50 {
+  background-color: #ffffff !important;
+}
+
+[data-theme='light'] .bg-neutral-850,
+[data-theme='light'] .bg-neutral-800,
+[data-theme='light'] .bg-neutral-800\/20,
+[data-theme='light'] .bg-neutral-800\/50 {
+  background-color: #edf0f6 !important;
+}
+
+[data-theme='light'] .border-neutral-900,
+[data-theme='light'] .border-neutral-850,
+[data-theme='light'] .border-neutral-800,
+[data-theme='light'] .border-neutral-700,
+[data-theme='light'] .border-neutral-700\/60 {
+  border-color: #d7dce7 !important;
+}
+
+[data-theme='light'] .text-white,
+[data-theme='light'] .text-neutral-100,
+[data-theme='light'] .text-neutral-200,
+[data-theme='light'] .text-neutral-250,
+[data-theme='light'] .text-neutral-300 {
+  color: #111827 !important;
+}
+
+[data-theme='light'] .text-neutral-400,
+[data-theme='light'] .text-neutral-450,
+[data-theme='light'] .text-neutral-500,
+[data-theme='light'] .text-neutral-550,
+[data-theme='light'] .text-neutral-600,
+[data-theme='light'] .text-neutral-700 {
+  color: #5b6472 !important;
+}
+
+[data-theme='light'] input,
+[data-theme='light'] select,
+[data-theme='light'] textarea {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+[data-theme='light'] input::placeholder,
+[data-theme='light'] textarea::placeholder {
+  color: #8b94a3 !important;
+}
+
+[data-theme='light'] .hover\:bg-neutral-800:hover,
+[data-theme='light'] .hover\:bg-neutral-750:hover,
+[data-theme='light'] .hover\:bg-neutral-700:hover,
+[data-theme='light'] .hover\:bg-neutral-850:hover {
+  background-color: #e4e8f1 !important;
+}
+
+[data-theme='light'] .hover\:text-white:hover {
+  color: #111827 !important;
+}
+
+[data-theme='light'] .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c3cad6;
+}
