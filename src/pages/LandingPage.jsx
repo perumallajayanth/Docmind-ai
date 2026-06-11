@@ -74,16 +74,11 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-4">
             <button
-              onClick={handleContinueAsGuest}
-              className="text-sm font-medium hover:text-white text-neutral-300 transition-colors"
+              onClick={handleContinueWithGoogle}
+              disabled={googleLoading}
+              className="text-sm font-medium hover:text-white text-neutral-300 transition-colors disabled:opacity-75 disabled:cursor-not-allowed"
             >
-              Sign In
-            </button>
-            <button
-              onClick={handleContinueAsGuest}
-              className="text-xs font-semibold px-4 py-2.5 rounded-lg bg-neutral-800 border border-neutral-700/60 hover:bg-neutral-700 hover:text-white transition-all duration-200"
-            >
-              Guest Access
+              {googleLoading ? 'Connecting...' : 'Sign In'}
             </button>
           </div>
         </div>
